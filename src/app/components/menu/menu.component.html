@@ -1,0 +1,47 @@
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="text-side-menu"><small>Instituto autonomo Municipal de ordenamiento Territorial
+            <br>Fernandez Feo</small>
+    </div>
+    <div class="list-group list-group-flush">
+
+        <div id="accordion">
+            <div class="acordion-one">
+                <div class="card-header" id="headingOne">
+                    <div class="btn btn-block text-left" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="false" aria-controls="collapseOne">
+                        Personas
+                    </div>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="list-group list-group-flush">
+                        <a [routerLink]="['/consult-person']" routerLinkActive="active"
+                            class="list-group-item list-group-item-action bg-light">Consultar</a>
+                        <a [routerLink]="['/register-person']" routerLinkActive="active"
+                            class="list-group-item list-group-item-action bg-light">Registrar</a>
+                        <a [routerLink]="['report-person']" routerLinkActive="active"
+                            class="list-group-item list-group-item-action bg-light">Reportes</a>
+                    </div>
+                </div>
+            </div>
+            <!--  Acordion Two -->
+            <div class="acordion-two">
+                <div class="card-header" id="documento">
+                    <div class="btn btn-block text-left" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Documentos
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="documento" data-parent="#accordion">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Consultar</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Crear</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Reporte</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->

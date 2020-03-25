@@ -1,0 +1,45 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-12 login-form-1">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h3>Crear Registrador</h3>
+                <img width="200px" src="assets/img/svg/logo-catastro.svg" />
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="w-50 d-flex flex-column">
+                        <div class="form-group">
+
+                            <input type="email" email name="email" class="form-control" placeholder="Email *"
+                                formControlName="email" [class.is-invalid]="form.touched && getErrors('email')" />
+                            <small *ngIf="form.touched && getErrors('email')"
+                                class="text-danger pl-2 animated fadeIn">El correo es
+                                obligatorio, y tener un formato de correo valido </small>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Nombre y Apellido *"
+                                minlength="2" formControlName="name"
+                                [class.is-invalid]="form.touched && getErrors('name')" />
+                            <small *ngIf="form.touched && getErrors('name')" class="text-danger pl-2 animated fadeIn">El
+                                nombre es
+                                obligatorio, minimo 3 caracteres </small>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder=" Password *"
+                                minlength="6" formControlName="password"
+                                [class.is-invalid]="form.touched && getErrors('password')" />
+                            <small *ngIf="form.touched && getErrors('password')"
+                                class="text-danger pl-2 animated fadeIn">El password es
+                                obligatorio, minimo 6 caracteres </small>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-outline-primary" value="Crear Cuenta" />
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
