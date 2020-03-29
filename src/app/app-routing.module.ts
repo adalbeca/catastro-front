@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/private/home/home.component';
 import { LoginComponent } from './pages/public/login/login.component';
 import { DefaultComponent } from './layouts/private-layout/default.component';
-import { RegisterPersonComponent } from './pages/private/person/register-person/register.component';
-import { ConsultPersonComponent } from './pages/private/person/consult-person/consult.component';
+import { RegisterPersonComponent } from './pages/private/person/register-person/register-person.component';
+import { ConsultPersonComponent } from './pages/private/person/consult-person/consult-person.component';
 import { ConsultUserComponent } from './pages/private/users/consult-user/consult-user.component';
 import { RegisterUserComponent } from './pages/private/users/register-user/register-user.component';
 

@@ -1,0 +1,13 @@
+<app-title-page title="Consultar Persona"></app-title-page>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="cedula">Cedula</label>
+            <input type="text" formControlName="cedula" [class.is-invalid]="form.touched && getErrors('cedula')"
+                class="form-control" id="cedula" name="cedula" placeholder="Introduzca Cedula">
+            <small *ngIf="form.touched && getErrors('cedula')" class="text-danger pl-2 animated fadeIn">La cedula es
+                obligatoria, y no debe ser mayor a 16 digitos</small>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary"> Consultar </button>
+</form>

@@ -1,0 +1,37 @@
+<app-title-page title="Registrar Persona"></app-title-page>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="cedula">Cedula</label>
+            <input type="text" formControlName="cedula" [class.is-invalid]="form.touched && getErrors('cedula')"
+                class="form-control" id="cedula" name="cedula" placeholder="Introduzca Cedula">
+            <small *ngIf="form.touched && getErrors('cedula')" class="text-danger pl-2 animated fadeIn">La cedula es
+                obligatoria, y no debe ser mayor a 16 digitos</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="nombre">Nombre</label>
+            <input type="text" [class.is-invalid]="form.touched && getErrors('nombre')" formControlName="nombre"
+                class="form-control" id="nombre" name="nombre" placeholder="Indique nombre">
+            <small *ngIf="form.touched && getErrors('nombre')" class="text-danger pl-2 animated fadeIn">El nombre es
+                obligatorio </small>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="telefono">Telefono</label>
+            <input type="text" formControlName="telefono" [class.is-invalid]="form.touched && getErrors('telefono')"
+                class="form-control" id="telefono" name="telefono" placeholder="Indique Telefono">
+            <small *ngIf="form.touched && getErrors('telefono')" class="text-danger pl-2 animated fadeIn">El telefono es
+                obligatorio, y no debe ser mayor a 11 digitos </small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCity">Direccion</label>
+            <input type="text" formControlName="direccion" [class.is-invalid]="form.touched && getErrors('direccion')"
+                class="form-control" name="direccion" placeholder="Direccion">
+            <small *ngIf="form.touched && getErrors('direccion')" class="text-danger pl-2 animated fadeIn">La direccion
+                es obligatoria </small>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
